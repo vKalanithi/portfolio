@@ -1,0 +1,210 @@
+body {
+ background-color: #1d1d1d;
+ /* Set the width of the scrollbar */
+ scrollbar-width: none;
+ scrollbar-color: #1d1d1d #ff4500;
+
+}
+
+body::-webkit-scrollbar {
+ width: 0px;
+ height: 0px;
+ background-color: #ff4500;
+}
+
+.mainContainer {
+ position: relative;
+}
+
+.navbarContainer {
+ position: sticky;
+ top: 0;
+ width: 100%;
+ background-color: transparent;
+ padding: 10px;
+ z-index: 1;
+}
+
+.navbarContainer::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ z-index: -1;
+ background-image: url('../assest/img/banner.jpg');
+ background-size: cover;
+ filter: blur(3px);
+ /* apply a 5px blur effect */
+}
+
+.navbarContainer .navbar_menu {
+ cursor: pointer;
+}
+
+.navbarContainer .navbar_menu.active {
+ color: #ff4500;
+ border-bottom: 5px solid;
+ padding-bottom: 11px;
+}
+
+.navbarContainer .navbar_menu.active_mobile {
+ color: #ff4500;
+ /* border-bottom: 2px solid; */
+ /* padding-bottom: 11px; */
+}
+
+.bannerContainer {
+ height: calc(100vh - 57px);
+ max-height: 1074px
+}
+
+.bannerImg {
+ position: relative;
+ /* background-image: url('../assest/img/banner.jpg');
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+ filter: blur(5px); */
+}
+
+.bannerImg::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ z-index: -1;
+ background-image: url('../assest/img/banner.jpg');
+ background-size: cover;
+ filter: blur(3px);
+ /* apply a 5px blur effect */
+}
+
+.banner_textsection {
+ position: relative;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.bannerText {
+ color: rgb(136, 136, 136);
+}
+
+.banner_name {
+ position: absolute;
+ font-family: 'Mr Dafoe', 'cursive';
+ color: white;
+ letter-spacing: 24px;
+}
+
+.banner_text {
+ text-align: left;
+}
+
+.section_heading {
+ font-size: 2rem;
+ font-weight: 600;
+ color: rgb(136, 136, 136);
+ text-decoration: underline;
+ text-decoration-color: #ff4500;
+ text-underline-position: under;
+}
+
+
+/* --------------------------------------- */
+@keyframes scroll {
+ 0% {
+  transform: translateX(-640%);
+ }
+
+ 100% {
+  transform: translateX(500%);
+ }
+}
+
+@keyframes scrollOppsite {
+ 0% {
+  transform: translateX(500%);
+ }
+
+ 100% {
+  transform: translateX(-640%);
+ }
+}
+
+
+.icon-container {
+ display: flex;
+ width: 100%;
+ overflow: hidden;
+ gap: 24px;
+}
+
+.icon-container .icon {
+ flex-shrink: 0;
+ margin-right: 20px;
+ animation: scroll 9s linear infinite;
+}
+
+.icon-container-scrollOppsite {
+ display: flex;
+ width: 100%;
+ overflow: hidden;
+ gap: 24px;
+}
+
+.icon-container-scrollOppsite .icon {
+ flex-shrink: 0;
+ margin-right: 20px;
+ animation: scrollOppsite 9s linear infinite;
+}
+
+
+.aboutSection>p {
+ font-size: 14px;
+ font-weight: 500;
+}
+
+.aboutSection>p>span {
+ font-size: 20px;
+ font-weight: 600;
+ letter-spacing: 1px;
+}
+
+.boldText {
+ color: #ff4500
+}
+
+.customButton {
+ color: #ff4500;
+ border: 1px solid #ff4500;
+ padding: 10px;
+ letter-spacing: 5px;
+ cursor: pointer;
+ transition: color 0.8s ease-in-out, border 0.8s ease-in-out;
+ font-weight: 600;
+ transition-delay: 0.5s;
+}
+
+.customButton:hover {
+ color: white;
+ border: 1px solid white;
+ /* Change background color on click */
+}
+
+.servicesHeading {
+ font-weight: 600;
+ letter-spacing: 2px;
+ color: #ff4500;
+ text-decoration: underline;
+ text-decoration-color: #ff4500;
+ text-underline-position: under;
+}
+
+/* ---------------------- */
